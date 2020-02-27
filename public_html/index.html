@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Primeiros passos com Javascript</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Marcelo Júnior">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/ppi.css">
+    </head>
+    <body>
+        <h1>Primeiros passos com Javascript</h1>
+        <section>
+            <h2>Parte I</h2>
+            <p>Aperte quaisquer dos botões a seguir para um "Hello World!"</p>
+            <button onclick="alert('Olá mundo!')">Em português</button>
+            <button onclick="emIngles()">Em inglês</button>
+            <button onclick="emEspanhol()">Em espanhol</button>
+        </section>
+        <section>
+            <h2>Parte II</h2>
+            <p>Mudar conteúdo de um elemento</p>
+            <label for="nome">Informe algum nome:</label>
+            <input type="text" id="nome">
+            <button onclick="cumprimentar()">cumprimentar</button>
+            <p id="cumprimento"></p>
+        </section>
+        <section>
+            <h2>Parte III</h2>
+            <p>Aperte quaisquer dos botões a seguir:</p>
+            <button onclick="changeColor('red')">Vermelho</button>
+            <button onclick="changeColor('green')">Verde</button>
+            <button onclick="changeColor('blue')">Azul</button>
+            <input type="color" onchange="changeColor(this.value)">
+            <div class="quadro" id="changeColor"></div>
+        </section>
+        <section>
+            <h2>Parte IV</h2>
+            <p>Mudar valor de atributo de um elemento</p>
+            <label for="ligar">Marque para ligar:</label>
+            <input type="checkbox" id="ligar" onchange="ligar(this)">
+            <img alt="Lâmpada que liga e desliga" src="img/desligada.png" id="lampada">
+        </section>
+        <section>
+            <h2>Parte V</h2>
+            <p>Mudar classe de um elemento</p>
+            <label for="mostrar">Marque para mostrar:</label>
+            <input type="checkbox" id="mostrar" checked onchange="show(this.checked)">
+            <img alt="Lâmpada que liga e desliga" src="img/desligada.png" id="item">
+        </section>
+        
+        <script>
+            function emIngles(){
+                alert("Hello World!");
+            }
+        </script>
+        <script src="js/intro.js"></script>
+    </body>
+</html>
